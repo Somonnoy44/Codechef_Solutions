@@ -1,4 +1,8 @@
+//Language: C++
+//AUTHOR: Somonnoy Banerjee
+//GITHUB: https://github.com/Somonnoy44
 #include <iostream>
+
 #include <cstdlib>
 using namespace std;
 
