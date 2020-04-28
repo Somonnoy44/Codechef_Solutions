@@ -1,0 +1,17 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+int main()
+{
+       int T;
+       cin>>T;
+       while(T--)
+       {
+       	int num;
+       	cin>>num;
+       	int count=0;
+       	for(int i=num;i>0;i=i/10)
+       		if((i%10)==4)
+       			count++;
+       	cout<<count<<endl;
+	   }
+}
