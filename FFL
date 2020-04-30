@@ -1,0 +1,42 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+int main()
+{
+    int T;
+    cin>>T;
+    while(T--)
+    {
+     	int N,S;
+     	cin>>N>>S;
+     	int P[N];
+     	int flag=0;
+     	int info[N];
+     	for(int i=0;i<N;i++)
+     		cin>>P[i];
+     	for(int i=0;i<N;i++)
+     		cin>>info[i];
+     	
+     	int A[N]; // to store all prices of defenders(0)
+     	int B[N]; // to store all prices of defenders(1)
+     	int p=0,q=0; // p points to the indexes of array A and q points to the indexes of array B
+     	for(int i=0;i<N;i++)
+     	{
+     		if(info[i]==0)
+			{
+				A[p++]=P[i];
+			}	
+			else
+			{
+				B[q++]=P[i];
+			}
+		}
+		sort(A,A+p);
+		sort(B,B+q);
+		if(A[0]+B[0]+S>100 || p==0 || q==0)
+			cout<<"no"<<endl;
+		else
+			cout<<"yes"<<endl;
+	} 	
+	return 0;
+}
+
