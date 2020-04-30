@@ -21,7 +21,7 @@ int main()
      		cin>>info[i];
      	
      	int A[N]; // to store all prices of defenders(0)
-     	int B[N]; // to store all prices of defenders(1)
+     	int B[N]; // to store all prices of forwards(1)
      	int p=0,q=0; // p points to the indexes of array A and q points to the indexes of array B
      	for(int i=0;i<N;i++)
      	{
