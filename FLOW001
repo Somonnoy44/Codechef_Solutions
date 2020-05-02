@@ -1,5 +1,7 @@
-// bits/stdc++.h works in linux. 
-// It loads most of the libraries of C++ required.
+//Language: C++
+//AUTHOR: Somonnoy Banerjee
+//GITHUB: https://github.com/Somonnoy44
+
 #include <bits/stdc++.h> 
 
 using namespace std;
