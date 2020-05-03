@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+	// your code goes here
+		int T;
+	    cin>>T;
+		for(int i=0;i<T;i++)
+		{
+		    int N;
+		    cin>>N;
+		    int score=0; // to calculate and store final score
+		    
+		    int max[8]; // to store the maximum value of each submission
+		    for(int k=0;k<8;k++)
+		    {
+		    
+		    	max[k]=0;
+			}
+			
+			int p,s;
+			
+		    for(int j=0;j<N;j++)
+		    {
+		        
+		        cin>>p>>s; // inputting submission no. and score
+		        
+		        	if(p<9)
+		        	{
+						
+						if(s>max[p-1]) 
+						{
+							max[p-1]=s; // Updating score
+						}
+					}
+					
+			}
+		    for(int d=0;d<8;d++)
+				{
+					score+=max[d]; // calculating final score of scorable problems
+				}
+		    cout<<score<<endl;
+		}
+			return 0;
+}
