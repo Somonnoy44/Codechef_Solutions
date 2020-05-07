@@ -1,0 +1,27 @@
+#include<iostream>
+
+int main(){
+int T,N;
+std::cin>>T;
+
+for(int j=0;j<T;j++){
+std::cin>>N;
+int A[N],B[N];
+for(int i=0;i<N;i++){
+    std::cin>>A[i];
+}
+for(int i=0;i<N;i++){
+    std::cin>>B[i];
+}
+int ch;
+int lsc=0;
+for(int i=0;i<N;i++){
+    ch = A[i]*20 - B[i]*10 ;
+//    std::cout<<ch<<"\n";
+    if(ch>=lsc)
+        lsc=ch;
+}
+std::cout<<lsc<<"\n";
+}
+}
+
