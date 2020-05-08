@@ -1,0 +1,68 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int T;
+	cin>>T;
+	for(int j=0;j<T;j++)
+	{
+		int N,x,y,z,c[2];
+		c[0]=0;
+		c[1]=1;
+		cin>>N;
+		int A[N];
+		for(int p=0;p<N;p++)
+		{
+			cin>>A[p];
+		}
+		for(int i=0;i<N-2;i++)
+		{
+			x=c[0];
+			y=c[1];
+			z=i+2;
+			int B[3];
+			B[0]=A[x];
+			B[1]=A[y];
+			B[2]=A[z];
+			for(int k=0;k<2;k++)
+			{
+				for(int m=k+1;m<3;m++)
+				{
+					int temp;
+					if(B[k]>B[m])
+					{
+						temp=B[k];
+						B[k]=B[m];
+						B[m]=temp;
+					}
+				}
+			}
+			if(A[x]==B[1])
+			{
+				A[x]=0;
+				c[0]=y;
+				c[1]=z;
+			}
+			if(A[y]==B[1])
+			{
+				A[y]=0;
+				c[0]=x;
+				c[1]=z;
+			}
+			if(A[z]==B[1])
+			{
+				A[z]=0;
+				c[0]=x;
+				c[1]=y;
+			}
+			
+		}
+		for(int s=0;s<N;s++)
+		{
+			if(A[s]!=0)
+				cout<<A[s]<<" ";
+		}
+		cout<<endl;
+	}
+	return 0;
+}
