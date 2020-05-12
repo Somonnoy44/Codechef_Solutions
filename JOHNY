@@ -1,0 +1,24 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+int main()
+{
+       int T;
+       cin>>T;
+       while(T--)
+       {
+       	int N;
+       	cin>>N;
+       	int A[N];
+       	for(int i=0;i<N;i++)
+       		cin>>A[i];
+       	int K;
+       	cin>>K;
+       	int num=A[K-1];
+       	int i, j;  
+    sort(A,A+N); // sorting according to ascending order
+    for(int i=0;i<N;i++)
+    	if(A[i]==num)
+    		cout<<i+1<<endl;
+}
+}
+
