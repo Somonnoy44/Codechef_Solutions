@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int T;
+    cin>>T;
+    while(T--)
+    {
+        string S; // S is the string inputted by the user
+        cin>>S;
+        int count = 1;
+        string newS=""; // newS is the new String formed
+        for(int i =0;i<S.length();i++)
+        {
+            if(S[i+1]==S[i])
+            {
+                count++;
+            }
+            else
+            {
+                newS = newS + newS[i] + to_string(count); // the to_string() method converts any datatype to string
+                count = 1;
+            }
+        }
+        if(newS.length()<S.length())
+        {
+            cout<<"YES"<<endl;
+        }
+        else
+        {
+            cout<<"NO"<<endl;
+    }    }
+}
