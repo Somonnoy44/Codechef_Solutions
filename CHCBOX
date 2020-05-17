@@ -1,0 +1,46 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+int t;
+scanf("%d",&t);
+
+for(int x=0;x<t;x++){
+
+    long long n;
+    cin>>n;
+    long long arr[n];
+    long long mx=0,ind=0;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+        if(arr[i] > mx){
+            mx = arr[i];
+        }
+    }
+    long long dis=0,f=-1;
+    for(long long i=0;i<n;i++){
+        if(arr[i] == mx){
+           if(f==-1)
+                f=i;
+           else{
+                if(f - i >= n-i+f)
+                    dis = dis + n-i+f;
+                else
+                    dis = dis + i-f;
+                f = i;
+               // cout<<"f = "<<f<<"dis = "<<dis<<" ";
+           }
+        }
+    }
+    if(dis >= n/2)
+        cout<<0<<"\n";
+    else {
+        if(dis==0)
+            cout<<n/2<<"\n";
+        else
+            cout<<n/2-dis<<"\n";
+    }
+}
+
+
+}
